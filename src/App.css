@@ -1,0 +1,88 @@
+.App {
+  text-align: center;
+  background-color: rgb(245, 245, 245);
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  max-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  box-shadow: 5px 5px 4px #888888;
+}
+
+.App-body {
+  height: 100vh;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.create-icon {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+
+
+.stickynote {
+  display: flex;
+  width: 15vw;
+  height: 25vh;
+  flex-direction: row;
+  border: .2px solid black;
+  box-shadow: 1px 1px 3px #888888;
+  margin: 20px;
+  background-color: #FFFF88;
+}
+
+.stickynote p {
+  margin: 10px;
+  display: inline-block;
+  word-break: break-all;
+  white-space: normal;
+
+}
+
+
+
+.circle-plus {
+  color: rgb(70, 106, 216);
+  transition: all .2s ease;
+}
+
+.circle-plus:hover{
+  color: rgb(245, 64, 64);
+  font-size: 3em;
+  transition: all .2s ease;
+}
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
