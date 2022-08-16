@@ -1,19 +1,32 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
-// import { useState } from "react";
-
+import React, { useState } from "react";
+import Modal from './CreateNoteModal';
 
 function CreateIcon(){
-    // const [ modalIsOpen, setModalIsOpen ] = useState(false);
+    const [ modalIsOpen, setModalIsOpen ] = useState(false);
 
-    // function createNote(){
+    function createNote(){
+        setModalIsOpen(true);
+    }
 
-    // }
+
+    function cancelEvent(){
+        setModalIsOpen(false);
+    }
+
+    function submitEvent(e){
+        console.log(e);
+        setModalIsOpen(false);
+    }
+
 
     return(
-        <div className="create-icon">
-              <FontAwesomeIcon icon={ faCirclePlus } size="2xl" className="circle-plus" />
+        <div className="create-icon">   
+              <FontAwesomeIcon icon={ faCirclePlus } size="2xl" className="circle-plus" onClick={ createNote }/>
+              {modalIsOpen && <Modal onCancel={cancelEvent} onSubmit={submitEvent}/>}
         </div>    
+
     )
 }
 

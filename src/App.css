@@ -70,10 +70,17 @@
   width: 15vw;
   height: 10vh;
   margin: 50px auto;
-  background-color: #fff;
+  background-color: rgb(82, 80, 80);
   border-radius: 15px;
+
 }
 
+.modal-dialog p {
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: bold;
+  padding-top: 10px;
+}
 .modal-dialog textarea{
   resize: none;
   background-color: #FFFF88;
@@ -91,10 +98,18 @@
   float: left;
 }
 
+.modal-icons #model-cancel:hover {
+  color: white;
+}
+
 .modal-icons #model-submit {
   color: rgb(70, 106, 216);
   padding: 15px;
   float: right;
+}
+
+.modal-icons #model-submit:hover {
+  color: white;
 }
 
 .stickynote {
