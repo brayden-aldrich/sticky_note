@@ -17,13 +17,13 @@
 
 .App-header {
   background-color: #282c34;
-  max-height: 10vh;
+  min-height: 50px;
+  height: 10vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: 'Times New Roman', Times, serif;
-  font-size: calc(10px + 2vmin);
+  font-size: 28px;
   color: white;
   box-shadow: 5px 5px 4px #888888;
 }
@@ -42,7 +42,60 @@
   right: 10px;
 }
 
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(120, 120, 120, 0.85);
+}
 
+.create-note-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+  overflow: scroll
+}
+
+.modal-dialog {
+  width: auto;
+  max-width: 600px;
+  min-width: 320px;
+  min-height: 350px;
+  width: 15vw;
+  height: 10vh;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.modal-dialog textarea{
+  resize: none;
+  background-color: #FFFF88;
+  width: 300px;
+  height: 220px;
+}
+
+.modal-icons {
+  font-size: 30px;
+}
+
+.modal-icons #model-cancel {
+  color: rgb(245, 64, 64);
+  padding: 15px;
+  float: left;
+}
+
+.modal-icons #model-submit {
+  color: rgb(70, 106, 216);
+  padding: 15px;
+  float: right;
+}
 
 .stickynote {
   display: flex;
@@ -53,6 +106,8 @@
   box-shadow: 1px 1px 3px #888888;
   margin: 20px;
   background-color: #FFFF88;
+  min-height: 200px;
+  min-width: 200px;
 }
 
 .stickynote p {
@@ -60,19 +115,21 @@
   display: inline-block;
   word-break: break-all;
   white-space: normal;
-
+  font-size: 15px;
 }
+
 
 
 
 .circle-plus {
   color: rgb(70, 106, 216);
   transition: all .2s ease;
+  font-size: 3em;
 }
 
 .circle-plus:hover{
   color: rgb(245, 64, 64);
-  font-size: 3em;
+  font-size: 4em;
   transition: all .2s ease;
 }
 

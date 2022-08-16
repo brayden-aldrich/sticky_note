@@ -1,6 +1,7 @@
 import './App.css';
 import Stickynote from './components/Stickynote';
 import CreateIcon from './components/CreateIcon';
+import CreateNote from './components/CreateNote';
 function App() {
   return (
     
@@ -11,6 +12,7 @@ function App() {
         <div className="App-body">
             <Stickynote text="lorem ipsum " />
             <CreateIcon />
+            <CreateNote />
         </div>
         
   
