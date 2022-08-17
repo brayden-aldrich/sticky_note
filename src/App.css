@@ -113,7 +113,7 @@
 }
 
 .stickynote {
-  display: flex;
+  display: inline-block;
   width: 15vw;
   height: 25vh;
   flex-direction: row;

@@ -1,8 +1,17 @@
 import './App.css';
 import Stickynote from './components/Stickynote';
 import CreateIcon from './components/CreateIcon';
+import React, { useState } from "react";
+
+
 
 function App() {
+  
+  const [ notes, setNotes ] = useState([]);
+  function newNote(e){
+    const newNote = [e, ...notes];
+    setNotes(newNote)
+  }
   return (
     
     <div className="App">
@@ -10,7 +19,8 @@ function App() {
             <h1>notes</h1>
         </div>
         <div className="App-body">
-            <CreateIcon />
+            { notes.map((value, i) => <Stickynote key={i} text={value}/>) }
+            <CreateIcon submitText={newNote}/>
         </div>
         
   

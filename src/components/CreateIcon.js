@@ -3,7 +3,8 @@ import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 import Modal from './CreateNoteModal';
 
-function CreateIcon(){
+
+function CreateIcon(props){
     const [ modalIsOpen, setModalIsOpen ] = useState(false);
 
     function createNote(){
@@ -16,8 +17,8 @@ function CreateIcon(){
     }
 
     function submitEvent(e){
-        console.log(e);
         setModalIsOpen(false);
+        props.submitText(e);
     }
 
 
